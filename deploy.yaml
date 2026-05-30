@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: label-test
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: label-test
+  template:
+    metadata:
+      labels:
+        app: label-test
+        env: prod   # 👈 desired label (operator will enforce this)
+    spec:
+      containers:
+      - name: nginx
+        image: nginx

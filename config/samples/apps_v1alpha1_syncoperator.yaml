@@ -1,0 +1,9 @@
+apiVersion: apps.dev.com/v1alpha1
+kind: SyncOperator
+metadata:
+  labels:
+    app.kubernetes.io/name: label-sync-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: syncoperator-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,7 @@
+apiVersion: apps.dev.com/v1alpha1
+kind: SyncOperator
+metadata:
+  name: sync-label-test
+  namespace: default
+spec:
+  targetDeployment: label-test
